@@ -34,7 +34,7 @@ function ballTap() {
   .to(['.slide_1 .element_7'], { opacity: 0, display: "none", duration: .5 }, "<")
   .to(['.slide_1 .element_8'], { opacity: 0, display: "none", duration: .5 }, "<")
   .fromTo(['.slide_1 .element_9'], { opacity: 0, scaleX: .5, scaleY: .5 }, { opacity: 1, scaleX: 1, scaleY: 1, display: "block", duration: 1 }, "<")
-  .to(['.slide_1 .element_1'], { opacity: 0, display: "none", duration: .8 }, ">")
+  .to(['.slide_1 .element_1'], { opacity: 0, display: "none", duration: .8,delay:.5 }, ">")
   .to(['.slide_1 .element_9'], { opacity: 0, display: "none", duration: .3 }, "<.4")
   // second slide
   .to(['.slide_2 .element_1'], { opacity: 1, display: "block", duration: .8 }, "<-.4")
@@ -49,7 +49,7 @@ let t2 = gsap.timeline({ defaults: { ease: "power1.inOut" }, repeat: -1 })
   .to(".slide_2 .element_4", { x: -200, y: 150, duration: .7,delay:2 })
   .to(".slide_2 .element_4", { x: 0, y: 0, duration: .7 })
 
-  
+
   var master = gsap.timeline()
     .add(tl)
     .to(t2)
