@@ -6,11 +6,6 @@ document.querySelector(".slide_1 .element_4").addEventListener("click", ballTap)
 document.querySelector(".slide_1 .element_5").addEventListener("click", ballTap)
 
 
-
-
-
-
-
 function ballTap() {
   let t1 = gsap.timeline({ defaults: { ease: "power1.inOut" } })
   .fromTo(['.slide_1 .element_4'], { opacity: 1, display: 'block' }, { opacity: 0, display: 'none', duration: .5 })
@@ -47,10 +42,10 @@ function ballTap() {
 
 let t2 = gsap.timeline({ defaults: { ease: "power1.inOut" }, repeat: -1 })
   .to(".slide_2 .element_4", { x: -200, y: 150, duration: .7,delay:2 })
-  .to(".slide_2 .element_4", { x: 0, y: 0, duration: .7 })
+  .to(".slide_2 .element_4", { x: 0, y: 0, duration: .7 },">")
 
 
   var master = gsap.timeline()
-    .add(tl)
+    .add(t1)
     .to(t2)
 }
